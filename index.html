@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+   <title></title>
+  </head>
+
+  <body>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <header>
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <div>
+                <img src="images/qm_logo.png" alt="Quality Movers Logo">
+            </div>
+            <div class="headerinfo">
+                <h1>Moving Made Easy</h1>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <div class="row med-img">
+        <div class="form-card form-card-1 col-md-6 order-md-1 col-xl-4 order-xl-2">
+            <div class="intro">
+            <h2>Enter your information for a free quote</h2>
+            <p>Please complete all fields</p>
+            </div>
+            <div id="form">
+                <!-- HERE IS THE NEW FORM WITH BOOTSTRAP -->
+                <form action="/action_page.php" class="needs-validation" novalidate>
+                    <div class="form-group">
+                      <label for="name">Name:</label>
+                      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required aria-describedby="Name input">
+                      <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <div class="form-group">
+                      <label for="phone">Phone Number:</label>
+                      <input type="tel" class="form-control" id="phone" placeholder="Enter phone number" name="phone" required aria-describedby="Telephone Number input" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                      <div class="invalid-feedback">Please fill out this field with the syntax: 123-456-7890</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="name" placeholder="Enter email" name="name" required aria-describedby="Email input">
+                        <div class="invalid-feedback">Email syntax: email@mail.com</div>
+                      </div>
+                    <div class="form-group">
+                        <label for="datetime">Move date and time:</label>
+                        <input type="datetime-local" class="form-control" id="datetime" placeholder="Enter date and time" name="datetime" required aria-describedby="Date and time input">
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="movetype">Move type:</label>
+                        <textarea class="form-control" id="movetype" placeholder="Describe your move type" name="movesize" rows="2" required aria-describedby="Describe your move type"></textarea>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                      </div>
+                      <div class="form-group">
+                        <label for="movesize">Move size:</label>
+                        <textarea class="form-control" id="movesize" placeholder="Describe your move size" name="movesize" rows="2" required aria-describedby="Describe your move size"></textarea>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                      </div>
+                    <button type="submit" aria-label="Submit form button to get a quote" class="btn btn-primary">Get a quote!</button>
+                  </form>
+            </div>
+            <p class="call-us" id="main-call">Questions? Call us toll-free at 1-800-234-5678</p>
+            </div>
+        <div class="form-card form-card-2 col-md-12 order-md-2 col-xl-7 order-xl-1">
+          <div class="full-screen-head d-flex flex-row align-items-center">
+            <div>
+                <img src="images/qm_logo.png" alt="Quality Movers Logo">
+            </div>
+            <div class="headerinfo-2">
+                <h1>Moving Made Easy</h1>
+                <p class= call-us id="header-call">Questions? Call us toll-free at 1-800-234-5678</p>
+            </div>
+        </div>
+            <img class="desktop-img"alt="Photo of people sitting on the floor with boxes as they are moving in" src="images/desktop.png">
+            <h2>Quick and convenient moving assistance!</h2>
+            <p>Here at Quality Movers, we believe in providing our customers with a seamless moving experience. Whether you are moving down the road or across the United States of America, our job is to ensure you and your belongings arrive safely and free of damage.</p>
+            <button class="btn btn-primary" aria-label="Learn More Button leading to a separate page">Learn more</button>
+        </div>
+        </div>
+        </div>
+    </main>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Disable form submissions if there are invalid fields
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Get the forms we want to add validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+        </script>
+  </body>
+  </html>
