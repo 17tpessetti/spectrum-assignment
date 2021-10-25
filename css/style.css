@@ -1,10 +1,11 @@
 .skip a{
     background: white;
+    color: #006c67;
     left: 0;
     padding: 6px;
     -webkit-transition: top 1s ease-out;
     transition: top 1s ease-out;
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     top: -40px;
     
@@ -78,7 +79,7 @@ h2{
 }
 
 p{
-    color: #515151;
+    color: #474747;
     font-size: 12pt;
 }
 
