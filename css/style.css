@@ -125,7 +125,7 @@ footer{
 footer p{
     margin: 0px;
     color: black;
-    font-weight: medium;
+    font-weight:normal;
 }
 
 @media screen and (max-width: 500px){
