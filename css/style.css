@@ -30,11 +30,7 @@ header img{
 
 header{
     background-color: #6dc5c0;
-    position: sticky;
     box-shadow: 0px 2px 10px rgb(75, 75, 75);
-    top: 0;
-    left: 0;
-    z-index: 1;
 }
 
 h1{
@@ -51,6 +47,7 @@ header p{
 #main{
     background: url('../images/mobile-bg.png') no-repeat center fixed; 
     background-size: cover;
+    background-color: #f5f5f5;
 }
 
 
@@ -119,6 +116,16 @@ p{
 
 .headerinfo-2{
     display: none;
+}
+
+footer{
+    background-color: #6dc5c0;
+}
+
+footer p{
+    margin: 0px;
+    color: black;
+    font-weight: medium;
 }
 
 @media screen and (max-width: 500px){
@@ -239,3 +246,21 @@ p{
     }
 
 }
+
+@media screen and (prefers-reduced-motion: reduce){
+    /*Turn off scroll*/
+    html{
+        scroll-behavior: auto; /* Removes scroll animation */
+    }
+  
+    /*Turn off transition*/
+    .skip a{
+      -webkit-transition: initial; /* sets to default setting */
+      transition: initial; /* sets to default setting */
+    }
+  
+    /*Turn off parallax*/
+    header{
+      background-attachment: initial;
+    }
+  }
